@@ -116,7 +116,7 @@ public class GameManager : MonoBehaviour
         gameObjectsRoot.SetActive(true);
         currentGameState = GameState.Gameplay;
         UIManager.Instance.Gameplay();
-        screenRatio = Screen.width / Screen.height;
+        screenRatio = (float)Screen.width / (float)Screen.height;
 
         for(int i = 0; i < enemies.Length; i++)
         {
@@ -169,7 +169,7 @@ public class GameManager : MonoBehaviour
         if (currentGameState == GameState.Gameplay)
         {
 
-            screenRatio = Screen.width / Screen.height;
+            screenRatio = (float)Screen.width / (float)Screen.height;
 
             currentPlayerSpeed = Vector2.Lerp(currentPlayerSpeed, targetPlayerSpeed, Time.deltaTime);
 
