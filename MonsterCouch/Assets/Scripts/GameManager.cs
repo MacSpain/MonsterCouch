@@ -1,16 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.Assertions.Must;
-using Unity.VisualScripting.FullSerializer;
 
-
-
-
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
 public class GameManager : MonoBehaviour
 {
@@ -78,11 +68,7 @@ public class GameManager : MonoBehaviour
 
     public void QuitGame()
     {
-#if UNITY_EDITOR
-        EditorApplication.isPlaying = false;
-#else
         Application.Quit();
-#endif
     }
 
     public void HandleKeyboardInput()
